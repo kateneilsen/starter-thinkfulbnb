@@ -50,12 +50,24 @@ main img {
   flex: 2;
 }
 
+.item img {
+  width: 100%;
+}
+
+.row {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
 /* -------  Navigation ------- */
 
 header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
-  text-align: center;
 }
 
 .logo {
@@ -64,14 +76,26 @@ header {
   color: #fff;
 }
 
-header nav ul li {
-  list-style-type: none;
+header nav {
+  display: flex;
+  justify-content: center;
+
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+  margin-right: 0;
 }
 
 header nav ul li a:hover {
@@ -83,6 +107,7 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  padding-top: 10px;
 }
 
 form label {
@@ -117,3 +142,78 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+
+  /* Header and Nav */
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  header h1 {
+    margin: 14px 0;
+    padding-top: 0;
+  }
+
+  header nav {
+    margin-top: 8px;
+  }
+
+  /* Form */
+
+  form {
+    padding-top: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+
+  .group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .item{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vertical{
+    flex: 1;
+    align-self: center;
+  }
+
+  .item img{
+    width: 100%;
+    align-content: center;
+  }
+
+  .item-double{
+    flex: 2;
+    align-content: center;
+    align-self:center;
+  }
+
+
+  form select,
+  form input {
+    height: 30px;
+  }
+
+  .form-row{
+    display:flex;
+    flex-direction: column;
+    padding-right: 10px;
+    margin-right: 10px;
+
+  }
+
+  form button {
+    height: 55px;
+    justify-content: center;
+  }
+
+}
