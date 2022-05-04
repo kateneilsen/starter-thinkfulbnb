@@ -36,10 +36,10 @@
         <h2>Find the perfect vacation rental</h2>
         <!-- Create a form here -->
         <div class="group">
-          <fieldset class="group">
+          <div class="item">
           <form>
-
-            <div class="form-row">
+            <!--location-->
+            <div class="item item-double">
               <label for="location">Location</label>
               <input
                 id="location"
@@ -48,8 +48,8 @@
                 placeholder="Search destination"
               />
             </div>
-
-            <div class="form-row">
+            <!--Arrival Date-->
+            <div class="item item-double">
               <label for="arrive">Arrive</label>
               <input
                 id="date"
@@ -58,8 +58,8 @@
                 placeholder="mm/dd/yyyy"
               />
             </div>
-
-            <div class="form-row">
+            <!--Depart Date-->
+            <div class="item item-double">
               <label for="depart">Depart</label>
               <input
                 id="date"
@@ -68,8 +68,8 @@
                 placeholder="mm/dd/yyyy"
               />
             </div>
-
-            <div class="form-row">
+            <!--Type of Rental Drop-down-->
+            <div class="item item-double">
               <label for="type">Type</label>
               <select name="type" id="type" size="1">
                 <option value="apartment">Apartment</option>
@@ -81,13 +81,10 @@
                 <option value="yurt">Yurt</option>
               </select>
             </div>
-
-            <div class="form-row">
+            <!--Search Button-->
               <button type="search">Search</button>
-            </div>
-          
           </form>
-         </fieldset>
+        </div>
         </div>
       </section>
 
