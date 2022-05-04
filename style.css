@@ -54,20 +54,7 @@ main img {
   width: 100%;
 }
 
-.row {
-  flex-direction: row;
-  justify-content: space-between;
-}
 
-.form-row {
-  display: flex;
-  justify-content: space-between;
-}
-
-fieldset{
-  border: none;
-  flex: 1;
-}
 /* -------  Navigation ------- */
 
 header {
@@ -112,17 +99,20 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
-  padding-top: 10px;
 }
 
 form label {
   font-weight: bold;
 }
+form div{
+  display: flex;
+  justify-content: space-between;
+}
 
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 140px;
 }
 
 form button {
@@ -168,22 +158,20 @@ footer p {
   /* Form */
 
   form {
-    padding-top: 20px;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 
   .group {
-    display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   .item{
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .vertical{
@@ -202,23 +190,17 @@ footer p {
     align-self:center;
   }
 
-
-  form select,
-  form input {
-    height: 30px;
+  form div{
+    flex-direction: column;
   }
 
-  .form-row{
-    display:flex;
-    flex-direction: column;
-    padding-right: 10px;
-    margin-right: 10px;
-
+  form select, form input{
+    margin-bottom: 20px;
+    width: 180px;
   }
 
   form button {
-    height: 55px;
-    justify-content: center;
+    flex: 1;
   }
 
 }
